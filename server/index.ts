@@ -1,4 +1,4 @@
-import express from "express";
+import express, { type Request, type Response } from "express";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -7,7 +7,7 @@ const staticPath = path.resolve(process.cwd(), "dist/public");
 
 app.use(express.static(staticPath));
 
-app.get("*", (_req, res) => {
+app.get("*", (_req: Request, res: Response) => {
   const indexPath = path.resolve(staticPath, "index.html");
 
   if (fs.existsSync(indexPath)) {
