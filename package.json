@@ -1,22 +1,36 @@
 {
   "name": "continuum-waitlist",
   "version": "1.0.0",
-  "main": "server/index.ts",
+  "private": true,
   "type": "module",
   "scripts": {
-    "build": "npm run build --prefix client && tsc -p server/tsconfig.json",
+    "build": "vite build && tsc",
     "start": "node dist/server/index.js",
     "dev": "tsx server/index.ts"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "express": "^4.18.2",
-    "path": "^0.12.7",
-    "url": "^0.11.3"
+    "framer-motion": "^12.23.24",
+    "lucide-react": "^0.511.0",
+    "next-themes": "^0.4.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.3.0",
+    "wouter": "^3.7.1"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tsx": "^4.6.2",
     "typescript": "^5.3.2",
-    "tsx": "^4.6.2"
+    "vite": "^5.4.19"
   }
 }
