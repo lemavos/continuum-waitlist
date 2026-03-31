@@ -103,7 +103,7 @@ export default function CTASection() {
                 transition={{ duration: 0.5, ease: EASE }}
                 className="mb-8"
               >
-                <span className="label-caps text-[oklch(0.72_0.14_195)]">Get early access</span>
+                <span className="label-caps text-[oklch(0.72_0.14_195)]">Join the waitlist</span>
               </motion.div>
 
               <motion.h2
@@ -123,8 +123,8 @@ export default function CTASection() {
                 transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
                 className="font-body text-[1.0625rem] leading-[1.75] text-[oklch(0.45_0.008_260)] mb-12 max-w-lg mx-auto"
               >
-                Continuum is currently in private beta.
-                Early access is limited to a small group.
+                Continuum is still being built.
+                Leave your email and we’ll notify you when the beta becomes available.
               </motion.p>
 
               {/* Email form */}
@@ -144,7 +144,7 @@ export default function CTASection() {
                       <Check size={16} className="text-[oklch(0.09_0.012_260)]" />
                     </div>
                     <p className="font-body text-[oklch(0.75_0.005_60)]">
-                      You're on the list. We'll be in touch soon.
+                      You're on the list. We’ll let you know when the beta launches.
                     </p>
                   </motion.div>
                 ) : (
@@ -171,11 +171,11 @@ export default function CTASection() {
                               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
                               className="w-4 h-4 border-2 border-white border-t-transparent rounded-full"
                             />
-                            Joining...
+                            Joining the waitlist...
                           </>
                         ) : (
                           <>
-                            Get early access
+                            Join the waitlist
                             <ArrowRight size={16} />
                           </>
                         )}
@@ -204,9 +204,9 @@ export default function CTASection() {
                 className="mt-8 flex flex-wrap items-center justify-center gap-6"
               >
                 {[
-                  "No credit card required",
-                  "Free during beta",
-                  "Cancel anytime",
+                  "No spam",
+                  "Launch updates",
+                  "Beta invitation by email",
                 ].map((item) => (
                   <span key={item} className="flex items-center gap-1.5 label-caps text-[oklch(0.35_0.008_260)]">
                     <Check size={10} className="text-[oklch(0.72_0.14_195)]" />

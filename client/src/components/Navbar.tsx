@@ -6,6 +6,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import AppLogo from "./AppLogo";
 
 const navLinks = [
   { label: "Features", href: "#features" },
@@ -36,19 +37,7 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between h-16">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-7 h-7 rounded-md bg-[oklch(0.72_0.14_195)] flex items-center justify-center">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <circle cx="7" cy="7" r="2.5" fill="oklch(0.09 0.012 260)" />
-              <circle cx="2" cy="3" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-              <circle cx="12" cy="3" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-              <circle cx="2" cy="11" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-              <circle cx="12" cy="11" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-              <line x1="7" y1="4.5" x2="2" y2="3" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-              <line x1="7" y1="4.5" x2="12" y2="3" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-              <line x1="7" y1="9.5" x2="2" y2="11" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-              <line x1="7" y1="9.5" x2="12" y2="11" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-            </svg>
-          </div>
+          <AppLogo />
           <span
             className="text-[oklch(0.93_0.005_60)] font-semibold tracking-tight text-[1.05rem]"
             style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
@@ -73,7 +62,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:flex items-center gap-3">
           <a href="#cta" className="btn-primary text-sm py-2 px-5">
-            Get early access
+            Join the waitlist
           </a>
         </div>
 
@@ -109,7 +98,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a href="#cta" className="btn-primary text-sm text-center mt-2" onClick={() => setMobileOpen(false)}>
-                Get early access
+                Join the waitlist
               </a>
             </div>
           </motion.div>

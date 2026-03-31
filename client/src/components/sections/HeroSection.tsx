@@ -49,7 +49,7 @@ export default function HeroSection() {
             <motion.div {...fadeUp(0.1)}>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[oklch(0.72_0.14_195/0.3)] bg-[oklch(0.72_0.14_195/0.06)] mb-8">
                 <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.72_0.14_195)] animate-pulse" />
-                <span className="label-caps text-[oklch(0.72_0.14_195)]">Now in early access</span>
+                <span className="label-caps text-[oklch(0.72_0.14_195)]">Currently in development</span>
               </span>
             </motion.div>
 
@@ -69,15 +69,14 @@ export default function HeroSection() {
               {...fadeUp(0.3)}
               className="font-body text-[1.0625rem] leading-[1.75] text-[oklch(0.5_0.008_260)] mb-10 max-w-md"
             >
-              Continuum is a second brain built for speed, clarity, and real thinking.
-              Stop managing notes.{" "}
-              <span className="text-[oklch(0.75_0.005_60)] font-medium">Start building knowledge.</span>
+              Continuum is a second brain being built for speed, clarity, and real thinking.
+              Join the waitlist and we’ll notify you as soon as the beta opens.
             </motion.p>
 
             {/* CTAs */}
             <motion.div {...fadeUp(0.4)} className="flex flex-wrap gap-3">
               <a href="#cta" className="btn-primary animate-pulse-glow">
-                Start building your mind
+                Join the waitlist
                 <ArrowRight size={16} />
               </a>
               <a href="#how-it-works" className="btn-secondary">
