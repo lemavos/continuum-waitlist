@@ -1,7 +1,7 @@
 export { COOKIE_NAME, ONE_YEAR_MS } from "@shared/const";
 
 export const API_BASE_URL =
-  import.meta.env.VITE_API_URL || "https://continuum-waitlist-api.onrender.com";
+  import.meta.env.VITE_API_URL || "https://continuum-waitlist-api-m7wd.onrender.com";
 
 // Generate login URL at runtime so the callback always targets the backend API.
 export const getLoginUrl = () => {
