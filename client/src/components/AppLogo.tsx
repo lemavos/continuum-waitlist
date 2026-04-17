@@ -1,3 +1,5 @@
+import faviconUrl from "../../public/favicon.ico";
+
 interface AppLogoProps {
   className?: string;
 }
@@ -5,7 +7,7 @@ interface AppLogoProps {
 export default function AppLogo({ className = "w-7 h-7" }: AppLogoProps) {
   return (
     <img
-      src="client/src/public/favicon.ico"
+      src={faviconUrl}
       alt="Continuum logo"
       className={className}
       aria-hidden="true"
