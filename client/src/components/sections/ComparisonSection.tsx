@@ -21,9 +21,9 @@ const rows: { feature: string; continuum: CellValue; notion: CellValue; roam: Ce
 ];
 
 function CellIcon({ value }: { value: boolean | "partial" }) {
-  if (value === true) return <Check size={16} className="text-[oklch(0.72_0.14_195)] mx-auto" />;
-  if (value === false) return <X size={14} className="text-[oklch(0.35_0.008_260)] mx-auto" />;
-  return <Minus size={14} className="text-[oklch(0.45_0.008_260)] mx-auto" />;
+  if (value === true) return <Check size={16} className="text-white mx-auto" />;
+  if (value === false) return <X size={14} className="text-slate-500 mx-auto" />;
+  return <Minus size={14} className="text-slate-400 mx-auto" />;
 }
 
 export default function ComparisonSection() {
@@ -44,16 +44,16 @@ export default function ComparisonSection() {
                 transition={{ duration: 0.5, ease: EASE }}
                 className="mb-6"
               >
-                <span className="label-caps text-[oklch(0.72_0.14_195)]">Why Continuum</span>
+                <span className="label-caps text-white/70">Why Continuum</span>
               </motion.div>
               <motion.h2
                 initial={{ opacity: 0, y: 28 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.65, ease: EASE, delay: 0.1 }}
-                className="font-display text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1.1] tracking-[-0.02em] text-[oklch(0.93_0.005_60)]"
+                className="font-display text-[clamp(2rem,4vw,3.25rem)] font-bold leading-[1.1] tracking-[-0.02em] text-white"
               >
                 Not just another{" "}
-                <span className="italic text-[oklch(0.72_0.14_195)]">note-taking app.</span>
+                <span className="italic text-white/80">note-taking app.</span>
               </motion.h2>
             </div>
 
@@ -66,37 +66,37 @@ export default function ComparisonSection() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr>
-                    <th className="text-left pb-4 pr-8 font-body text-sm text-[oklch(0.35_0.008_260)] font-normal w-1/2">
+                    <th className="text-left pb-4 pr-8 font-body text-sm text-slate-400 font-normal w-1/2">
                       Feature
                     </th>
                     <th className="pb-4 px-6 text-center">
                       <div className="inline-flex flex-col items-center gap-1">
-                        <div className="w-8 h-8 rounded-md bg-[oklch(0.72_0.14_195)] flex items-center justify-center">
+                        <div className="w-8 h-8 rounded-md bg-white/[0.08] flex items-center justify-center">
                           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                            <circle cx="7" cy="7" r="2.5" fill="oklch(0.09 0.012 260)" />
-                            <circle cx="2" cy="3" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-                            <circle cx="12" cy="3" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-                            <circle cx="2" cy="11" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-                            <circle cx="12" cy="11" r="1.5" fill="oklch(0.09 0.012 260)" opacity="0.8" />
-                            <line x1="7" y1="4.5" x2="2" y2="3" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-                            <line x1="7" y1="4.5" x2="12" y2="3" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-                            <line x1="7" y1="9.5" x2="2" y2="11" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
-                            <line x1="7" y1="9.5" x2="12" y2="11" stroke="oklch(0.09 0.012 260)" strokeWidth="0.8" opacity="0.6" />
+                            <circle cx="7" cy="7" r="2.5" fill="#0b0b0b" />
+                            <circle cx="2" cy="3" r="1.5" fill="#0b0b0b" opacity="0.8" />
+                            <circle cx="12" cy="3" r="1.5" fill="#0b0b0b" opacity="0.8" />
+                            <circle cx="2" cy="11" r="1.5" fill="#0b0b0b" opacity="0.8" />
+                            <circle cx="12" cy="11" r="1.5" fill="#0b0b0b" opacity="0.8" />
+                            <line x1="7" y1="4.5" x2="2" y2="3" stroke="rgba(255, 255, 255, 0.32)" strokeWidth="0.8" opacity="0.6" />
+                            <line x1="7" y1="4.5" x2="12" y2="3" stroke="rgba(255, 255, 255, 0.32)" strokeWidth="0.8" opacity="0.6" />
+                            <line x1="7" y1="9.5" x2="2" y2="11" stroke="rgba(255, 255, 255, 0.32)" strokeWidth="0.8" opacity="0.6" />
+                            <line x1="7" y1="9.5" x2="12" y2="11" stroke="rgba(255, 255, 255, 0.32)" strokeWidth="0.8" opacity="0.6" />
                           </svg>
                         </div>
-                        <span className="font-display text-sm font-semibold text-[oklch(0.72_0.14_195)]">Continuum</span>
+                        <span className="font-display text-sm font-semibold text-white">Continuum</span>
                       </div>
                     </th>
                     <th className="pb-4 px-6 text-center">
                       <div className="inline-flex flex-col items-center gap-1">
                         <div className="w-8 h-8 rounded-md bg-white/[0.06] flex items-center justify-center text-sm">N</div>
-                        <span className="font-body text-sm text-[oklch(0.35_0.008_260)]">Notion</span>
+                        <span className="font-body text-sm text-slate-400">Notion</span>
                       </div>
                     </th>
                     <th className="pb-4 px-6 text-center">
                       <div className="inline-flex flex-col items-center gap-1">
                         <div className="w-8 h-8 rounded-md bg-white/[0.06] flex items-center justify-center text-sm">R</div>
-                        <span className="font-body text-sm text-[oklch(0.35_0.008_260)]">Roam</span>
+                        <span className="font-body text-sm text-slate-400">Roam</span>
                       </div>
                     </th>
                   </tr>
@@ -110,10 +110,10 @@ export default function ComparisonSection() {
                       transition={{ duration: 0.4, ease: EASE, delay: 0.3 + i * 0.06 }}
                       className="border-t border-white/[0.05] hover:bg-white/[0.02] transition-colors"
                     >
-                      <td className="py-4 pr-8 font-body text-sm text-[oklch(0.65_0.008_260)]">
+                      <td className="py-4 pr-8 font-body text-sm text-slate-300">
                         {row.feature}
                       </td>
-                      <td className="py-4 px-6 text-center bg-[oklch(0.72_0.14_195/0.03)]">
+                      <td className="py-4 px-6 text-center bg-white/[0.05]">
                         <CellIcon value={row.continuum} />
                       </td>
                       <td className="py-4 px-6 text-center">

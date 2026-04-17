@@ -24,9 +24,9 @@ export default function HeroSection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 90% 70% at 70% 50%, oklch(0.72 0.14 195 / 0.07) 0%, transparent 55%),
-            radial-gradient(ellipse 60% 80% at 15% 30%, oklch(0.72 0.14 195 / 0.04) 0%, transparent 50%),
-            radial-gradient(ellipse 100% 50% at 50% 100%, oklch(0.09 0.012 260) 0%, transparent 60%)
+            radial-gradient(circle at 70% 40%, rgba(255, 255, 255, 0.06), transparent 30%),
+            radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.04), transparent 24%),
+            radial-gradient(circle at 50% 100%, rgba(0,0,0,0.95), transparent 60%)
           `,
         }}
       />
@@ -35,7 +35,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle, oklch(1 0 0 / 0.06) 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)`,
           backgroundSize: "40px 40px",
           maskImage: "radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%)",
         }}
@@ -47,19 +47,19 @@ export default function HeroSection() {
           <div className="max-w-xl">
             {/* Badge */}
             <motion.div {...fadeUp(0.1)}>
-              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[oklch(0.72_0.14_195/0.3)] bg-[oklch(0.72_0.14_195/0.06)] mb-8">
-                <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.72_0.14_195)] animate-pulse" />
-                <span className="label-caps text-[oklch(0.72_0.14_195)]">Currently in development</span>
+              <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/[0.12] bg-white/[0.05] mb-8">
+                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+                <span className="label-caps text-[#888888]">Currently in development</span>
               </span>
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               {...fadeUp(0.2)}
-              className="font-display text-[clamp(2.75rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.025em] text-[oklch(0.93_0.005_60)] mb-6"
+              className="font-display text-[clamp(2.75rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.025em] text-white mb-6"
             >
               Your thoughts,{" "}
-              <em className="not-italic text-[oklch(0.72_0.14_195)] italic">finally</em>
+              <em className="not-italic text-[#888888] italic">finally</em>
               <br />
               connected.
             </motion.h1>
@@ -67,7 +67,7 @@ export default function HeroSection() {
             {/* Subheadline */}
             <motion.p
               {...fadeUp(0.3)}
-              className="font-body text-[1.0625rem] leading-[1.75] text-[oklch(0.5_0.008_260)] mb-10 max-w-md"
+              className="font-body text-[1.0625rem] leading-[1.75] text-[#888888] mb-10 max-w-md"
             >
               Continuum is a second brain being built for speed, clarity, and real thinking.
               Join the waitlist and we’ll notify you as soon as the beta opens.
@@ -99,7 +99,7 @@ export default function HeroSection() {
             <div
               className="absolute inset-4 rounded-2xl pointer-events-none"
               style={{
-                background: "radial-gradient(ellipse 80% 80% at 50% 50%, oklch(0.72 0.14 195 / 0.1) 0%, transparent 70%)",
+                background: "radial-gradient(ellipse 80% 80% at 50% 50%, rgba(255,255,255,0.12) 0%, transparent 70%)",
                 filter: "blur(20px)",
               }}
             />
@@ -114,10 +114,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: 20, y: -10 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2, ease: EASE }}
-              className="absolute -top-3 right-4 bg-[oklch(0.12_0.01_260/0.95)] backdrop-blur-sm border border-white/[0.08] rounded-xl px-3.5 py-2.5 shadow-xl"
+              className="absolute -top-3 right-4 bg-black/85 backdrop-blur-sm border border-white/[0.08] rounded-xl px-3.5 py-2.5"
             >
-              <p className="label-caps text-[oklch(0.72_0.14_195)] mb-1">Knowledge node</p>
-              <p className="text-[0.75rem] text-[oklch(0.75_0.005_60)] font-body font-medium">React Hooks → State Management</p>
+              <p className="label-caps text-[#888888] mb-1">Knowledge node</p>
+              <p className="text-[0.75rem] text-[#888888] font-body font-medium">React Hooks → State Management</p>
             </motion.div>
 
             {/* Floating label: bottom left */}
@@ -125,10 +125,10 @@ export default function HeroSection() {
               initial={{ opacity: 0, x: -20, y: 10 }}
               animate={{ opacity: 1, x: 0, y: 0 }}
               transition={{ duration: 0.6, delay: 1.5, ease: EASE }}
-              className="absolute -bottom-3 left-4 bg-[oklch(0.12_0.01_260/0.95)] backdrop-blur-sm border border-white/[0.08] rounded-xl px-3.5 py-2.5 shadow-xl"
+              className="absolute -bottom-3 left-4 bg-black/85 backdrop-blur-sm border border-white/[0.08] rounded-xl px-3.5 py-2.5"
             >
-              <p className="label-caps text-[oklch(0.72_0.14_195)] mb-1">Connected idea</p>
-              <p className="text-[0.75rem] text-[oklch(0.75_0.005_60)] font-body font-medium">Mental Models → Decision Making</p>
+              <p className="label-caps text-[#ffffff] mb-1">Connected idea</p>
+              <p className="text-[0.75rem] text-[#888888] font-body font-medium">Mental Models → Decision Making</p>
             </motion.div>
 
             {/* Floating counter: top left */}
@@ -136,12 +136,12 @@ export default function HeroSection() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 1.8, ease: EASE }}
-              className="absolute top-4 left-4 bg-[oklch(0.12_0.01_260/0.95)] backdrop-blur-sm border border-[oklch(0.72_0.14_195/0.2)] rounded-xl px-3 py-2 shadow-xl"
+              className="absolute top-4 left-4 bg-black/85 backdrop-blur-sm border border-white/[0.12] rounded-xl px-3 py-2"
             >
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-[oklch(0.72_0.14_195)] animate-pulse" />
-                <span className="font-display text-sm font-bold text-[oklch(0.72_0.14_195)]">247</span>
-                <span className="label-caps text-[oklch(0.45_0.008_260)]">connections</span>
+                <div className="w-2 h-2 rounded-full bg-[#ffffff] animate-pulse" />
+                <span className="font-display text-sm font-bold text-white">247</span>
+                <span className="label-caps text-[#888888]">connections</span>
               </div>
             </motion.div>
           </motion.div>
@@ -155,11 +155,11 @@ export default function HeroSection() {
         transition={{ delay: 2, duration: 0.6 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="label-caps text-[oklch(0.3_0.008_260)]">scroll</span>
+        <span className="label-caps text-[#888888]">scroll</span>
         <motion.div
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-px h-8 bg-gradient-to-b from-[oklch(0.72_0.14_195/0.4)] to-transparent"
+          className="w-px h-8 bg-gradient-to-b from-white/40 to-transparent"
         />
       </motion.div>
     </section>

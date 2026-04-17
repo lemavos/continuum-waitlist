@@ -18,7 +18,7 @@ import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[oklch(0.09_0.012_260)] text-[oklch(0.93_0.005_60)] overflow-x-hidden">
+    <div className="min-h-screen bg-[#000000] text-[#FFFFFF] overflow-x-hidden">
       <Navbar />
       <main>
         <HeroSection />

@@ -127,8 +127,8 @@ export default function CTASection() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 50%, oklch(0.72 0.14 195 / 0.08) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 40% at 50% 50%, oklch(0.72 0.14 195 / 0.04) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 60% at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 40% at 50% 50%, rgba(255,255,255,0.04) 0%, transparent 50%)
           `,
         }}
       />
@@ -138,8 +138,8 @@ export default function CTASection() {
         className="absolute inset-0 pointer-events-none opacity-[0.02]"
         style={{
           backgroundImage: `
-            linear-gradient(oklch(0.72 0.14 195) 1px, transparent 1px),
-            linear-gradient(90deg, oklch(0.72 0.14 195) 1px, transparent 1px)
+            linear-gradient(rgba(255,255,255,0.16) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.16) 1px, transparent 1px)
           `,
           backgroundSize: "60px 60px",
         }}
@@ -155,25 +155,25 @@ export default function CTASection() {
                 transition={{ duration: 0.5, ease: EASE }}
                 className="mb-8"
               >
-                <span className="label-caps text-[oklch(0.72_0.14_195)]">Join the waitlist</span>
+                <span className="label-caps text-[#888888]">Join the waitlist</span>
               </motion.div>
 
               <motion.h2
                 initial={{ opacity: 0, y: 32 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-                className="font-display text-[clamp(2.25rem,5vw,4rem)] font-bold leading-[1.05] tracking-[-0.025em] text-[oklch(0.93_0.005_60)] mb-6"
+                className="font-display text-[clamp(2.25rem,5vw,4rem)] font-bold leading-[1.05] tracking-[-0.025em] text-white mb-6"
               >
                 Stop collecting notes.
                 <br />
-                <span className="italic text-[oklch(0.72_0.14_195)]">Start building knowledge.</span>
+                <span className="italic text-[#888888]">Start building knowledge.</span>
               </motion.h2>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: EASE, delay: 0.2 }}
-                className="font-body text-[1.0625rem] leading-[1.75] text-[oklch(0.45_0.008_260)] mb-12 max-w-lg mx-auto"
+                className="font-body text-[1.0625rem] leading-[1.75] text-[#888888] mb-12 max-w-lg mx-auto"
               >
                 Continuum is still being built.
                 Leave your email and we’ll notify you when the beta becomes available.
@@ -192,10 +192,10 @@ export default function CTASection() {
                     transition={{ duration: 0.4, ease: EASE }}
                     className="flex items-center justify-center gap-3 py-4"
                   >
-                    <div className="w-8 h-8 rounded-full bg-[oklch(0.72_0.14_195)] flex items-center justify-center">
-                      <Check size={16} className="text-[oklch(0.09_0.012_260)]" />
+                    <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+                      <Check size={16} className="text-black" />
                     </div>
-                    <p className="font-body text-[oklch(0.75_0.005_60)]">
+                    <p className="font-body text-[#888888]">
                       {submittedEmail
                         ? `${submittedEmail} is already registered. We’ll let you know when the beta launches.`
                         : "You're on the list. We’ll let you know when the beta launches."}
@@ -211,7 +211,7 @@ export default function CTASection() {
                         placeholder="your@email.com"
                         disabled={state === "loading"}
                         required
-                        className="flex-1 px-4 py-3.5 rounded-lg bg-[oklch(0.14_0.01_260)] border border-white/[0.1] text-[oklch(0.93_0.005_60)] placeholder:text-[oklch(0.35_0.008_260)] font-body text-sm focus:outline-none focus:border-[oklch(0.72_0.14_195/0.5)] focus:ring-1 focus:ring-[oklch(0.72_0.14_195/0.3)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="flex-1 px-4 py-3.5 rounded-lg bg-[#111111] border border-white/[0.12] text-white placeholder:text-[#888888] font-body text-sm focus:outline-none focus:border-white/20 focus:ring-1 focus:ring-white/10 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                       />
                       <button 
                         type="submit" 
@@ -262,8 +262,8 @@ export default function CTASection() {
                   "Launch updates",
                   "Beta invitation by email",
                 ].map((item) => (
-                  <span key={item} className="flex items-center gap-1.5 label-caps text-[oklch(0.35_0.008_260)]">
-                    <Check size={10} className="text-[oklch(0.72_0.14_195)]" />
+                  <span key={item} className="flex items-center gap-1.5 label-caps text-[#888888]">
+                    <Check size={10} className="text-white" />
                     {item}
                   </span>
                 ))}
